@@ -16,4 +16,4 @@ This is the official website and digital portfolio of Carlton Heywood — guitar
 - CSS
 
 ## 📬 Contact
-Want to work together? Reach out: `your@email.com`
+Want to work together? Reach out: `cjwood1@gmail.com`
