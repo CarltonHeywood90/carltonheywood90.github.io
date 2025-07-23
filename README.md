@@ -3,7 +3,7 @@
 This is the official website and digital portfolio of Carlton Heywood — guitarist, composer, and sound designer.
 
 ## 🌐 Live Site
-👉 [Visit the live site](https://yourusername.github.io/carltonheywoodmusic)
+👉 [Visit the live site](https://carltonheywood.github.io)
 
 ## 🎶 What You'll Find
 - Free and paid 8-bit loop packs on [Itch.io](https://carltonheywood.itch.io)
