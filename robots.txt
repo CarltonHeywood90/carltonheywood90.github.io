@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://carltonheywood90.github.io/sitemap.xml
