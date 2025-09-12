@@ -7,7 +7,7 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #000000;
+      background: #000;
       color: #e0e0e0;
       max-width: 800px;
       margin: 2rem auto;
@@ -31,6 +31,14 @@
     nav a:hover {
       text-decoration: underline;
     }
+    .banner img {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin-bottom: 2rem;
+      border-radius: 8px;
+    }
     h1 {
       color: #4169E1;
       font-weight: 700;
@@ -39,12 +47,16 @@
     }
     h2 {
       margin-top: 1.5rem;
-      color: #ffffff;
-      align-items: center;
+      color: #fff;
     }
     p {
       font-size: 1.1rem;
       margin-bottom: 1rem;
+    }
+    .highlight {
+      text-align: center;
+      font-size: 1.4rem;
+      margin: 1rem 0;
     }
     a.service-link {
       color: #4169E1;
@@ -54,15 +66,22 @@
     a.service-link:hover {
       text-decoration: underline;
     }
-        .centered {
+    .centered {
       text-align: center;
     }
-
     .centered iframe,
     .centered a,
     .centered img {
       margin: auto;
       display: block;
+    }
+    footer {
+      background: #000;
+      color: #4169E1;
+      text-align: center;
+      padding: 1rem 0;
+      margin-top: 3rem;
+      font-weight: 600;
     }
   </style>
 </head>
@@ -83,67 +102,64 @@
     </ul>
   </nav>
 
-  <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Carlton Heywood - Guitarist</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 1rem;
-      background-color: #111;
-      color: #eee;
-    }
-
-    .banner img {
-      width: 100%;
-      max-width: 100%;
-      height: auto;
-      display: block;
-      margin-bottom: 2rem;
-      border-radius: 8px;
-    }
-
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
-    }
-
-    p {
-      font-size: 1.2rem;
-      line-height: 1.6;
-    }
-  </style>
-</head>
-
-<body>
   <div class="banner">
     <img src="banner.jpg" alt="Carlton Heywood Banner" />
   </div>
 
   <h1>Mixing & Mastering Services</h1>
 
-  <p style="text-align: center; font-size: 2rem;">
-    Need professional mixing and mastering to make your music shine? I offer audio production services tailored to your project.
+  <p class="highlight">
+    Need professional mixing and mastering to make your music shine?  
+    I offer audio production services tailored to your project.
   </p>
 
-  <p style="text-align: center; font-size: 2rem;">
-    Visit my SoundBetter profile to hear samples, check rates, and get in touch for collaborations or projects.
+  <p class="highlight">
+    Visit my <a class="service-link" href="https://soundbetter.com/profiles/638658-carlton-heywood" target="_blank" rel="noopener">SoundBetter profile</a> to hear samples, check rates, and get in touch for collaborations or projects.
   </p>
 
   <div class="centered">
     <h2>🎛️ Hire Me As Your Mixing and Mastering Engineer</h2>
-    <a href="https://soundbetter.com/profiles/638658-carlton-heywood" rel="noopener noreferrer" target="_blank"
-      title="Carlton Heywood profile on SoundBetter">
-      <img alt="Carlton Heywood, Editing on SoundBetter"
+    <a href="https://soundbetter.com/profiles/638658-carlton-heywood" rel="noopener noreferrer" target="_blank" title="Carlton Heywood profile on SoundBetter">
+      <img alt="Carlton Heywood on SoundBetter"
         src="https://d2p6ecj15pyavq.cloudfront.net/assets/SoundBetterBadge-c84cb3e75c4267f5bee41f7f617a81d9.svg"
         style="max-width: 130px;" />
     </a>
   </div>
 
-  <footer style="background:#000000; color:#4169E1; text-align:center; padding:1rem 0; margin-top:3rem; font-family:Arial, sans-serif; font-weight:600;">
+  <h2>What I Offer</h2>
+  <p><strong>Mixing:</strong> balancing levels, EQ, compression, reverb, automation, and creative effects.</p>
+  <p><strong>Mastering:</strong> loudness optimization, stereo enhancement, EQ, limiting, and final polish for streaming platforms.</p>
+
+  <h2>My Process</h2>
+  <ol>
+    <li>Send your stems or project files</li>
+    <li>I create a first-pass mix/master</li>
+    <li>You provide feedback for revisions</li>
+    <li>Final files delivered, optimized for release</li>
+  </ol>
+
+  <h2>Tools & Environment</h2>
+  <ul>
+    <li><strong>DAW:</strong> Cubase Artist 13</li>
+    <li><strong>Plugins:</strong> iZotope Music Production Suite, Archetype Abasi, Guitar Rig, Kontakt</li>
+    <li><strong>Monitoring:</strong> JBL monitors + subwoofer in an acoustically treated room</li>
+  </ul>
+
+  <h2>Hear My Work</h2>
+  <p>Everything on my <a class="service-link" href="https://soundcloud.com/" target="_blank" rel="noopener">SoundCloud</a> was recorded, mixed, and mastered by me. You can also visit my <a class="service-link" href="https://soundbetter.com/profiles/638658-carlton-heywood" target="_blank" rel="noopener">SoundBetter profile</a> for rates, reviews, and samples.</p>
+
+  <h2>Why Work With Me?</h2>
+  <ul>
+    <li>12+ years of experience producing and polishing music</li>
+    <li>A musician’s perspective — I understand what artists want to hear</li>
+    <li>Personalized service, not cookie-cutter templates</li>
+    <li>Affordable rates with professional results</li>
+  </ul>
+
+  <h2>Ready to Transform Your Sound?</h2>
+  <p class="highlight">Your music deserves to shine. Let’s collaborate and make your tracks stand out.</p>
+
+  <footer>
     <p>🎸 Carlton Heywood Music</p>
     <p>Original chiptune loops, guitar tracks, and music assets</p>
     <p>© 2025 Carlton Heywood</p>
