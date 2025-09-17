@@ -1,13 +1,30 @@
 /* styles.css */
 
+/* PAGE BODY */
 body {
   font-family: Arial, sans-serif;
   background: #000;
-  color: #e0e0e0;
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 0 1rem;
+  color: #fff; /* white text */
+  margin: 0;
+  padding: 0;
   line-height: 1.6;
+}
+
+/* WRAPPER FOR CONTENT */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* NAVIGATION */
+nav {
+  width: 100%;
+  background: #000;
+  border-bottom: 1px solid #222;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 nav ul {
@@ -15,8 +32,8 @@ nav ul {
   flex-wrap: wrap;
   gap: 1rem;
   list-style: none;
-  padding: 0;
-  margin-bottom: 2rem;
+  padding: 1rem;
+  margin: 0;
   justify-content: center;
 }
 
@@ -24,12 +41,15 @@ nav a {
   color: #4169E1;
   text-decoration: none;
   font-weight: 600;
+  transition: color 0.2s ease;
 }
 
 nav a:hover {
+  color: #fff;
   text-decoration: underline;
 }
 
+/* BANNER IMAGE */
 .banner img {
   width: 100%;
   max-width: 100%;
@@ -39,6 +59,7 @@ nav a:hover {
   border-radius: 8px;
 }
 
+/* HEADINGS */
 h1 {
   color: #4169E1;
   font-weight: 700;
@@ -47,21 +68,27 @@ h1 {
 }
 
 h2 {
-  margin-top: 1.5rem;
   color: #fff;
+  font-weight: 700;
+  margin-top: 2rem;
+  text-align: center;
 }
 
+/* PARAGRAPHS */
 p {
   font-size: 1.1rem;
   margin-bottom: 1rem;
+  text-align: center; /* center all text by default */
 }
 
+/* HIGHLIGHT TEXT */
 .highlight {
   text-align: center;
   font-size: 1.4rem;
   margin: 1rem 0;
 }
 
+/* LINKS */
 a.service-link {
   color: #4169E1;
   font-weight: 600;
@@ -70,10 +97,13 @@ a.service-link {
 
 a.service-link:hover {
   text-decoration: underline;
+  color: #fff;
 }
 
+/* CENTERED ELEMENTS (IFRAMES, IMAGES, LINKS) */
 .centered {
   text-align: center;
+  margin: 2rem 0;
 }
 
 .centered iframe,
@@ -83,6 +113,7 @@ a.service-link:hover {
   display: block;
 }
 
+/* FOOTER */
 footer {
   background: #000;
   color: #4169E1;
