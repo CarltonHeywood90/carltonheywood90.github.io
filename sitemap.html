@@ -3,62 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sitemap - Carlton Heywood</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #000000;
-      color: #e0e0e0;
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-      line-height: 1.6;
-    }
-    nav ul {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      list-style: none;
-      padding: 0;
-      margin-bottom: 2rem;
-      justify-content: center;
-    }
-    nav a {
-      color: #4169E1;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    h1 {
-      color: #4169E1;
-      font-weight: 700;
-      margin-bottom: 1rem;
-      text-align: center;
-    }
-    ul.pages {
-      list-style-type: none;
-      padding-left: 0;
-    }
-    ul.pages li {
-      margin-bottom: 0.5rem;
-      text-align: center;
-    }
-    a.page-link {
-      color: #4169E1;
-      font-weight: 600;
-      text-decoration: none;
-    }
-    a.page-link:hover {
-      text-decoration: underline;
-    }
-    h2 {
-      margin-top: 1.5rem;
-      color: #ffffff;
-      text-align: center;
-    }
-  </style>
+  <title>Sitemap</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div id="nav-placeholder"></div>
+  <script>
+  fetch('nav.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('nav-placeholder').innerHTML = data;
+    });
+  </script>
 </head>
 <body>
 

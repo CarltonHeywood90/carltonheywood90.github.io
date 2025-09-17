@@ -1,121 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <link rel="canonical" href="https://carltonheywood90.github.io/" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Carlton Heywood | Musician, Producer, Engineer</title>
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #000000;
-      color: #e0e0e0;
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-      line-height: 1.6;
-    }
-    nav ul {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      list-style: none;
-      padding: 0;
-      margin-bottom: 2rem;
-      justify-content: center;
-    }
-    nav a {
-      color: #4169E1;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    h1 {
-      color: #4169E1;
-      font-weight: 700;
-      text-align: center;
-    }
-
-    h2 {
-      color: #ffffff;
-      font-weight: 700;
-      margin-bottom: 1rem;
-      text-align: center;
-    }
-
-    .centered {
-      text-align: center;
-    }
-
-    .centered iframe,
-    .centered a,
-    .centered img {
-      margin: auto;
-      display: block;
-    }
-  </style>
-
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
 
-  <nav>
-    <ul>
-      <li><a href="/">Home</a></li> 
-      <li><a href="8bit-sound.html">8-Bit Sound</a></li>
-      <li><a href="original-music.html">Original Music</a></li>
-      <li><a href="youtube-channel.html">YouTube Channel</a></li>
-      <li><a href="about-me.html">About Me</a></li>
-      <li><a href="blog.html">Blog</a></li>
-      <li><a href="book-me.html">Book Me</a></li>
-      <li><a href="bandcamp.html">Bandcamp</a></li>
-      <li><a href="mixing-mastering.html">Mixing &amp; Mastering</a></li>
-      <li><a href="sitemap.html">Sitemap</a></li>
-    </ul>
-  </nav>
+  <!-- Modular nav placeholder -->
+  <div id="nav-placeholder"></div>
+  <script>
+    fetch('nav.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('nav-placeholder').innerHTML = data;
+      });
+  </script>
 
-  <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Carlton Heywood - Guitarist</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 1rem;
-      background-color: #111;
-      color: #eee;
-    }
-
-    .banner img {
-      width: 100%;
-      max-width: 100%;
-      height: auto;
-      display: block;
-      margin-bottom: 2rem;
-      border-radius: 8px;
-    }
-
-  </style>
-</head>
-
-<body>
   <div class="banner">
     <img src="banner.jpg" alt="Carlton Heywood Banner" />
   </div>
 
   <h1>Carlton Heywood</h1>
-  <p style="text-align: center; font-size: 2rem;">Musician • Producer • Mixing Engineer</p>
+  <p style="text-align: center; font-size: 1.2rem;">Musician • Producer • Mixing Engineer</p>
 
-  <p style="text-align: center; font-size: 2rem;">
-  Welcome to the official blog of <strong>Carlton Heywood</strong> — musician, composer, and sound designer. Here you’ll find original 8-bit chiptune loops, melodic guitar riffs, and downloadable audio assets for indie games. Follow my creative process, stream my latest music on SoundCloud, or grab loop packs from my Itch.io store</a>.
+  <p style="text-align: center; font-size: 1.2rem;">
+    Welcome to the official blog of <strong>Carlton Heywood</strong> — musician, composer, and sound designer. Here you’ll find original 8-bit chiptune loops, melodic guitar riffs, and downloadable audio assets for indie games. Follow my creative process, stream my latest music on SoundCloud, or grab loop packs from my Itch.io store.
   </p>
-
 
   <div class="centered">
     <h2>🎵 Buy My Loop Pack on itch.io</h2>
@@ -126,7 +39,7 @@
     </iframe>
   </div>
 
-    <div class="centered">
+  <div class="centered">
     <h2>🎵 Buy “Sowing Thorns” on Bandcamp</h2>
     <iframe style="border: 0; width: 400px; height: 175px; display: block; margin: 0 auto;"
       src="https://bandcamp.com/EmbeddedPlayer/track=535442203/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
@@ -145,9 +58,9 @@
   <div class="centered">
     <h2>🎵 Watch My Videos on YouTube</h2>
     <a href="https://www.youtube.com/@CarltonHeywood" target="_blank" rel="noopener noreferrer"
-      style="display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; font-weight: bold; color: #FF0000;">
+      class="youtube-link">
       <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png"
-        alt="YouTube Logo" style="width: 128px; height: 128px;" />
+        alt="YouTube Logo" style="width:128px;height:128px;" />
       <span>Carlton Heywood YouTube Channel</span>
     </a>
   </div>
@@ -158,16 +71,15 @@
       title="Carlton Heywood profile on SoundBetter">
       <img alt="Carlton Heywood, Editing on SoundBetter"
         src="https://d2p6ecj15pyavq.cloudfront.net/assets/SoundBetterBadge-c84cb3e75c4267f5bee41f7f617a81d9.svg"
-        style="max-width: 130px;" />
+        style="max-width:130px;" />
     </a>
   </div>
 
-<footer style="background:#000000; color:#4169E1; text-align:center; padding:1rem 0; margin-top:3rem; font-family:Arial, sans-serif; font-weight:600;">
-  <p>🎸 Carlton Heywood Music</p>
-  <p>Original chiptune loops, guitar tracks, and music assets</p>
-  <p>© 2025 Carlton Heywood</p>
-</footer>
+  <footer>
+    <p>🎸 Carlton Heywood Music</p>
+    <p>Original chiptune loops, guitar tracks, and music assets</p>
+    <p>© 2025 Carlton Heywood</p>
+  </footer>
 
 </body>
-
 </html>

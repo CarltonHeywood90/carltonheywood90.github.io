@@ -4,115 +4,43 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>About Me - Carlton Heywood</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #000000;
-      color: #e0e0e0;
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-      line-height: 1.6;
-    }
-    nav ul {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      list-style: none;
-      padding: 0;
-      margin-bottom: 2rem;
-      justify-content: center;
-    }
-    nav a {
-      color: #4169E1;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    h1 {
-      color: #4169E1;
-      font-weight: 700;
-      margin-bottom: 1rem;
-      text-align: center;
-    }
-    p {
-      font-size: 1rem;
-      margin-bottom: 1rem;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <nav>
-    <ul>
-      <li><a href="/">Home</a></li> 
-      <li><a href="8bit-sound.html">8-Bit Sound</a></li>
-      <li><a href="original-music.html">Original Music</a></li>
-      <li><a href="youtube-channel.html">YouTube Channel</a></li>
-      <li><a href="about-me.html">About Me</a></li>
-      <li><a href="blog.html">Blog</a></li>
-      <li><a href="book-me.html">Book Me</a></li>
-      <li><a href="bandcamp.html">Bandcamp</a></li>
-      <li><a href="mixing-mastering.html">Mixing &amp; Mastering</a></li>
-      <li><a href="sitemap.html">Sitemap</a></li>
-    </ul>
-  </nav>
+  <!-- Modular nav placeholder -->
+  <div id="nav-placeholder"></div>
+  <script>
+    fetch('nav.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('nav-placeholder').innerHTML = data;
+      });
+  </script>
 
-  <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Carlton Heywood - Guitarist</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 1rem;
-      background-color: #111;
-      color: #eee;
-    }
-
-    .banner img {
-      width: 100%;
-      max-width: 100%;
-      height: auto;
-      display: block;
-      margin-bottom: 2rem;
-      border-radius: 8px;
-    }
-
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
-    }
-
-    p {
-      font-size: 1.2rem;
-      line-height: 1.6;
-    }
-  </style>
-</head>
-
-<body>
   <div class="banner">
     <img src="banner.jpg" alt="Carlton Heywood Banner" />
   </div>
 
   <h1>About Me</h1>
 
-  <p style="text-align: center; font-size: 2rem;">Hi, I’m Carlton Heywood — a lifelong musician with a passion for crafting both evocative guitar compositions and nostalgic 8-bit soundscapes. My musical journey began at age eleven when I joined the band program in middle school. After that, I expanded my experience by joining a bagpipe program and diving deep into music theory and composition during high school. Using the knowledge I gained from these experiences, I started teaching myself to play guitar, blending formal education with self-driven exploration.</p>
+  <p style="text-align: center; font-size: 1.2rem;">
+    Hi, I’m Carlton Heywood — a lifelong musician with a passion for crafting both evocative guitar compositions and nostalgic 8-bit soundscapes. My musical journey began at age eleven when I joined the band program in middle school. After that, I expanded my experience by joining a bagpipe program and diving deep into music theory and composition during high school. Using the knowledge I gained from these experiences, I started teaching myself to play guitar, blending formal education with self-driven exploration.
+  </p>
 
-  <p style="text-align: center; font-size: 2rem;">I create original music not just to fill the silence, but to tell stories — stories that inspire, energize, and sometimes comfort. Whether it’s a driving guitar riff or a carefully crafted chiptune loop, my goal is to connect with listeners and fellow creators in meaningful ways.</p>
+  <p style="text-align: center; font-size: 1.2rem;">
+    I create original music not just to fill the silence, but to tell stories — stories that inspire, energize, and sometimes comfort. Whether it’s a driving guitar riff or a carefully crafted chiptune loop, my goal is to connect with listeners and fellow creators in meaningful ways.
+  </p>
 
-  <p style="text-align: center; font-size: 2rem;">When I’m not composing, I’m usually tinkering with new sounds, collaborating with other artists, or exploring whatever new ideas catch my curiosity. I’d love for you to join me on this creative journey — check out my music, follow my channels, and say hi anytime!</p>
+  <p style="text-align: center; font-size: 1.2rem;">
+    When I’m not composing, I’m usually tinkering with new sounds, collaborating with other artists, or exploring whatever new ideas catch my curiosity. I’d love for you to join me on this creative journey — check out my music, follow my channels, and say hi anytime!
+  </p>
 
-<footer style="background:#000000; color:#4169E1; text-align:center; padding:1rem 0; margin-top:3rem; font-family:Arial, sans-serif; font-weight:600;">
-  <p>🎸 Carlton Heywood Music</p>
-  <p>Original chiptune loops, guitar tracks, and music assets</p>
-  <p>© 2025 Carlton Heywood</p>
-</footer>
+  <footer>
+    <p>🎸 Carlton Heywood Music</p>
+    <p>Original chiptune loops, guitar tracks, and music assets</p>
+    <p>© 2025 Carlton Heywood</p>
+  </footer>
 
 </body>
 </html>

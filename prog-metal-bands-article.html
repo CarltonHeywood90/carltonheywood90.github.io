@@ -1,130 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Discover why one artist creates his own sound in the world of prog metal bands. Personal story, embedded music, and future album details.">
-  <meta name="keywords" content="prog metal bands, progressive metal, new prog metal, metal music, progressive rock">
-  <meta name="author" content="Carlton Heywood">
-  <title>Prog Metal Bands and Personal Truth | Carlton Heywood</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      line-height: 1.6;
-      margin: 0;
-      padding: 0;
-      background: #111;
-      color: #f0f0f0;
-    }
-    header {
-      background: #222;
-      padding: 2rem;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2rem;
-      color: #4169E1;
-    }
-    main {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 1rem;
-    }
-    h2 {
-      color: #4169E1;
-      margin-top: 2rem;
-    }
-    a {
-      color: #81d4fa;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    .embed {
-      margin: 2rem 0;
-      text-align: center;
-    }
-    footer {
-      text-align: center;
-      padding: 2rem;
-      font-size: 0.9rem;
-      color: #999;
-    }
-        nav ul {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      list-style: none;
-      padding: 0;
-      margin-bottom: 2rem;
-      justify-content: center;
-    }
-    nav a {
-      color: #4169E1;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-  </style>
-
-  <nav>
-    <ul>
-      <li><a href="/">Home</a></li> 
-      <li><a href="8bit-sound.html">8-Bit Sound</a></li>
-      <li><a href="original-music.html">Original Music</a></li>
-      <li><a href="youtube-channel.html">YouTube Channel</a></li>
-      <li><a href="about-me.html">About Me</a></li>
-      <li><a href="blog.html">Blog</a></li>
-      <li><a href="book-me.html">Book Me</a></li>
-      <li><a href="bandcamp.html">Bandcamp</a></li>
-      <li><a href="mixing-mastering.html">Mixing &amp; Mastering</a></li>
-      <li><a href="sitemap.html">Sitemap</a></li>
-    </ul>
-  </nav>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Prog Metal Bands</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    <h1>Prog Metal Bands and Personal Truth: Why I Create My Own</h1>
-  </header>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Carlton Heywood - Guitarist</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 1rem;
-      background-color: #111;
-      color: #eee;
-    }
-
-    .banner img {
-      width: 100%;
-      max-width: 100%;
-      height: auto;
-      display: block;
-      margin-bottom: 2rem;
-      border-radius: 8px;
-    }
-
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
-    }
-
-    p {
-      font-size: 1.2rem;
-      line-height: 1.6;
-    }
-  </style>
+  <div id="nav-placeholder"></div>
+  <script>
+  fetch('nav.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('nav-placeholder').innerHTML = data;
+    });
+  </script>
 </head>
 
 <body>
