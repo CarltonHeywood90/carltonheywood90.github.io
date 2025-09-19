@@ -135,3 +135,34 @@ footer {
 .centered.youtube iframe {
   height: 360px;
 }
+
+/* Centered wrapper for embeds and calls-to-action */
+.centered {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+/* YouTube link container */
+.youtube-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  color: #FF0000; /* YouTube red */
+}
+
+/* YouTube icon image */
+.youtube-icon {
+  width: 64px;   /* scaled down to quarter size */
+  height: 64px;
+}
+
+/* Bandcamp iframe */
+.bandcamp-embed {
+  border: 0;
+  width: 400px;      /* same as before */
+  height: 90px;      /* half the previous height (175px → 90px) */
+  display: block;
+  margin: 0 auto;
+}
