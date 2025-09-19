@@ -1,23 +1,25 @@
-/* styles.css */
-
-/* PAGE BODY */
+/* =========================
+   Global Styles
+========================= */
 body {
   font-family: Arial, sans-serif;
   background: #000;
-  color: #fff; /* white text */
+  color: #fff;
   margin: 0;
   padding: 0;
   line-height: 1.6;
 }
 
-/* WRAPPER FOR CONTENT */
+/* Wrapper for main content */
 .container {
   max-width: 800px;
   margin: 0 auto;
   padding: 2rem 1rem;
 }
 
-/* NAVIGATION */
+/* =========================
+   Navigation
+========================= */
 nav {
   width: 100%;
   background: #000;
@@ -49,17 +51,20 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* BANNER IMAGE */
+/* =========================
+   Banner
+========================= */
 .banner img {
   width: 100%;
-  max-width: 100%;
   height: auto;
   display: block;
   margin-bottom: 2rem;
   border-radius: 8px;
 }
 
-/* HEADINGS */
+/* =========================
+   Typography
+========================= */
 h1 {
   color: #4169E1;
   font-weight: 700;
@@ -70,25 +75,25 @@ h1 {
 h2 {
   color: #fff;
   font-weight: 700;
-  margin-top: 2rem;
+  margin: 2rem 0 1rem;
   text-align: center;
 }
 
-/* PARAGRAPHS */
 p {
   font-size: 1.1rem;
   margin-bottom: 1rem;
-  text-align: center; /* center all text by default */
+  text-align: center;
 }
 
-/* HIGHLIGHT TEXT */
 .highlight {
   text-align: center;
   font-size: 1.4rem;
   margin: 1rem 0;
 }
 
-/* LINKS */
+/* =========================
+   Links
+========================= */
 a.service-link {
   color: #4169E1;
   font-weight: 600;
@@ -100,7 +105,9 @@ a.service-link:hover {
   color: #fff;
 }
 
-/* CENTERED ELEMENTS (IFRAMES, IMAGES, LINKS) */
+/* =========================
+   Layout Helpers
+========================= */
 .centered {
   text-align: center;
   margin: 2rem 0;
@@ -113,7 +120,54 @@ a.service-link:hover {
   display: block;
 }
 
-/* FOOTER */
+/* =========================
+   Embeds
+========================= */
+
+/* Default iframe sizing */
+.centered iframe {
+  max-width: 640px;
+  width: 100%;
+  height: 300px;
+  border: none;
+}
+
+/* Bandcamp embed */
+.bandcamp-embed {
+  width: 400px;
+  height: 90px; /* slimmer */
+}
+
+/* YouTube video embed */
+.youtube-embed {
+  max-width: 560px;
+  width: 100%;
+  height: 315px;
+}
+
+/* YouTube link (logo + text) */
+.youtube-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  color: #FF0000;
+}
+
+.youtube-link:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+
+.youtube-icon {
+  width: 64px;
+  height: 64px;
+}
+
+/* =========================
+   Footer
+========================= */
 footer {
   background: #000;
   color: #4169E1;
@@ -121,48 +175,4 @@ footer {
   padding: 1rem 0;
   margin-top: 3rem;
   font-weight: 600;
-}
-
-.centered iframe {
-  margin: auto;
-  display: block;
-  max-width: 640px;  /* keeps embeds from being full width */
-  width: 100%;        /* responsive to container */
-  height: 300px;      /* default height */
-}
-
-/* Optional: slightly taller for YouTube */
-.centered.youtube iframe {
-  height: 360px;
-}
-
-/* Centered wrapper for embeds and calls-to-action */
-.centered {
-  text-align: center;
-  margin: 2rem 0;
-}
-
-/* YouTube link container */
-.youtube-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  text-decoration: none;
-  font-weight: bold;
-  color: #FF0000; /* YouTube red */
-}
-
-/* YouTube icon image */
-.youtube-icon {
-  width: 64px;   /* scaled down to quarter size */
-  height: 64px;
-}
-
-/* Bandcamp iframe */
-.bandcamp-embed {
-  border: 0;
-  width: 400px;      /* same as before */
-  height: 90px;      /* half the previous height (175px → 90px) */
-  display: block;
-  margin: 0 auto;
 }
