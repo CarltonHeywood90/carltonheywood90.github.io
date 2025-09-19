@@ -8,73 +8,76 @@
 </head>
 <body>
 
+  <!-- Modular nav -->
   <div id="nav-placeholder"></div>
   <script>
-  fetch('nav.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('nav-placeholder').innerHTML = data;
-    });
+    fetch('nav.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('nav-placeholder').innerHTML = data;
+      });
   </script>
 
   <div class="banner">
     <img src="banner.jpg" alt="Carlton Heywood Banner" />
   </div>
 
-  <h1>Mixing & Mastering Services</h1>
+  <div class="container">
+    <h1 class="page-title">Mixing & Mastering Services</h1>
 
-  <p class="highlight">
-    Need professional mixing and mastering to make your music shine?  
-    I offer audio production services tailored to your project.
-  </p>
+    <p class="highlight center-text">
+      Need professional mixing and mastering to make your music shine?  
+      I offer audio production services tailored to your project.
+    </p>
 
-  <p class="highlight">
-    Visit my <a class="service-link" href="https://soundbetter.com/profiles/638658-carlton-heywood" target="_blank" rel="noopener">SoundBetter profile</a> to hear samples, check rates, and get in touch for collaborations or projects.
-  </p>
+    <p class="highlight center-text">
+      Visit my <a class="service-link" href="https://soundbetter.com/profiles/638658-carlton-heywood" target="_blank" rel="noopener">SoundBetter profile</a> to hear samples, check rates, and get in touch for collaborations or projects.
+    </p>
 
-  <div class="centered">
-    <h2>🎛️ Hire Me As Your Mixing and Mastering Engineer</h2>
-    <a href="https://soundbetter.com/profiles/638658-carlton-heywood" rel="noopener noreferrer" target="_blank" title="Carlton Heywood profile on SoundBetter">
-      <img alt="Carlton Heywood on SoundBetter"
-        src="https://d2p6ecj15pyavq.cloudfront.net/assets/SoundBetterBadge-c84cb3e75c4267f5bee41f7f617a81d9.svg"
-        style="max-width: 130px;" />
-    </a>
+    <div class="centered">
+      <h2>🎛️ Hire Me As Your Mixing and Mastering Engineer</h2>
+      <a href="https://soundbetter.com/profiles/638658-carlton-heywood" rel="noopener noreferrer" target="_blank" title="Carlton Heywood profile on SoundBetter">
+        <img alt="Carlton Heywood on SoundBetter" src="https://d2p6ecj15pyavq.cloudfront.net/assets/SoundBetterBadge-c84cb3e75c4267f5bee41f7f617a81d9.svg" class="soundbetter-badge" />
+      </a>
+    </div>
+
+    <h2>What I Offer</h2>
+    <p><strong>Mixing:</strong> balancing levels, EQ, compression, reverb, automation, and creative effects.</p>
+    <p><strong>Mastering:</strong> loudness optimization, stereo enhancement, EQ, limiting, and final polish for streaming platforms.</p>
+
+    <h2>My Process</h2>
+    <ol>
+      <li>Send your stems or project files</li>
+      <li>I create a first-pass mix/master</li>
+      <li>You provide feedback for revisions</li>
+      <li>Final files delivered, optimized for release</li>
+    </ol>
+
+    <h2>Tools & Environment</h2>
+    <ul>
+      <li><strong>DAW:</strong> Cubase Artist 13</li>
+      <li><strong>Plugins:</strong> iZotope Music Production Suite, Archetype Abasi, Guitar Rig, Kontakt</li>
+      <li><strong>Monitoring:</strong> JBL monitors + subwoofer in an acoustically treated room</li>
+    </ul>
+
+    <h2>Hear My Work</h2>
+    <p>
+      Everything on my <a class="service-link" href="https://soundcloud.com/" target="_blank" rel="noopener">SoundCloud</a> was recorded, mixed, and mastered by me. You can also visit my <a class="service-link" href="https://soundbetter.com/profiles/638658-carlton-heywood" target="_blank" rel="noopener">SoundBetter profile</a> for rates, reviews, and samples.
+    </p>
+
+    <h2>Why Work With Me?</h2>
+    <ul>
+      <li>12+ years of experience producing and polishing music</li>
+      <li>A musician’s perspective — I understand what artists want to hear</li>
+      <li>Personalized service, not cookie-cutter templates</li>
+      <li>Affordable rates with professional results</li>
+    </ul>
+
+    <h2>Ready to Transform Your Sound?</h2>
+    <p class="highlight center-text">Your music deserves to shine. Let’s collaborate and make your tracks stand out.</p>
   </div>
 
-  <h2>What I Offer</h2>
-  <p><strong>Mixing:</strong> balancing levels, EQ, compression, reverb, automation, and creative effects.</p>
-  <p><strong>Mastering:</strong> loudness optimization, stereo enhancement, EQ, limiting, and final polish for streaming platforms.</p>
-
-  <h2>My Process</h2>
-  <ol>
-    <li>Send your stems or project files</li>
-    <li>I create a first-pass mix/master</li>
-    <li>You provide feedback for revisions</li>
-    <li>Final files delivered, optimized for release</li>
-  </ol>
-
-  <h2>Tools & Environment</h2>
-  <ul>
-    <li><strong>DAW:</strong> Cubase Artist 13</li>
-    <li><strong>Plugins:</strong> iZotope Music Production Suite, Archetype Abasi, Guitar Rig, Kontakt</li>
-    <li><strong>Monitoring:</strong> JBL monitors + subwoofer in an acoustically treated room</li>
-  </ul>
-
-  <h2>Hear My Work</h2>
-  <p>Everything on my <a class="service-link" href="https://soundcloud.com/" target="_blank" rel="noopener">SoundCloud</a> was recorded, mixed, and mastered by me. You can also visit my <a class="service-link" href="https://soundbetter.com/profiles/638658-carlton-heywood" target="_blank" rel="noopener">SoundBetter profile</a> for rates, reviews, and samples.</p>
-
-  <h2>Why Work With Me?</h2>
-  <ul>
-    <li>12+ years of experience producing and polishing music</li>
-    <li>A musician’s perspective — I understand what artists want to hear</li>
-    <li>Personalized service, not cookie-cutter templates</li>
-    <li>Affordable rates with professional results</li>
-  </ul>
-
-  <h2>Ready to Transform Your Sound?</h2>
-  <p class="highlight">Your music deserves to shine. Let’s collaborate and make your tracks stand out.</p>
-
-  <footer>
+  <footer class="site-footer">
     <p>🎸 Carlton Heywood Music</p>
     <p>Original chiptune loops, guitar tracks, and music assets</p>
     <p>© 2025 Carlton Heywood</p>

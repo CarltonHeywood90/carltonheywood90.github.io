@@ -8,44 +8,49 @@
 </head>
 <body>
 
+  <!-- Modular nav -->
   <div id="nav-placeholder"></div>
   <script>
-  fetch('nav.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('nav-placeholder').innerHTML = data;
-    });
+    fetch('nav.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('nav-placeholder').innerHTML = data;
+      });
   </script>
 
-<body>
   <div class="banner">
     <img src="banner.jpg" alt="Carlton Heywood Banner" />
   </div>
 
-  <h1>YouTube Channel</h1>
+  <div class="container">
+    <h1>YouTube Channel</h1>
 
-  <p style="text-align: center; font-size: 2rem;">Welcome to my YouTube Channel page! Here you’ll find videos featuring my original guitar compositions, riff sessions, and full song performances. This is where I share the music I write and play, blending melodic guitar work with energetic grooves and expressive solos.</p>
+    <p class="intro-text">
+      Welcome to my YouTube Channel page! Here you’ll find videos featuring my original guitar compositions, riff sessions, and full song performances. This is where I share the music I write and play, blending melodic guitar work with energetic grooves and expressive solos.
+    </p>
 
-  <p style="text-align: center; font-size: 2rem;">I regularly post new content showcasing my songwriting process, live jams, and recorded tracks. Whether you’re a fellow guitarist, music lover, or just curious about original instrumental music, there’s something here for you.</p>
+    <p class="intro-text">
+      I regularly post new content showcasing my songwriting process, live jams, and recorded tracks. Whether you’re a fellow guitarist, music lover, or just curious about original instrumental music, there’s something here for you.
+    </p>
 
-  <p style="text-align: center; font-size: 2rem;">Check out my latest videos below, and if you enjoy what you hear, please subscribe and hit the notification bell to stay updated on new releases!</p>
+    <p class="intro-text">
+      Check out my latest videos below, and if you enjoy what you hear, please subscribe and hit the notification bell to stay updated on new releases!
+    </p>
 
-  <div class="centered">
-    <h2>🎵 Watch My Videos on YouTube</h2>
-    <a href="https://www.youtube.com/@CarltonHeywood" target="_blank" rel="noopener noreferrer"
-      style="display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; font-weight: bold; color: #FF0000;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png"
-        alt="YouTube Logo" style="width: 128px; height: 128px;" />
-      <span>Carlton Heywood YouTube Channel</span>
-    </a>
+    <div class="centered">
+      <h2>🎵 Watch My Videos on YouTube</h2>
+      <a href="https://www.youtube.com/@CarltonHeywood" target="_blank" rel="noopener noreferrer" class="youtube-link">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" alt="YouTube Logo" />
+        <span>Carlton Heywood YouTube Channel</span>
+      </a>
+    </div>
   </div>
 
-<footer style="background:#000000; color:#4169E1; text-align:center; padding:1rem 0; margin-top:3rem; font-family:Arial, sans-serif; font-weight:600;">
-  <p>🎸 Carlton Heywood Music</p>
-  <p>Original chiptune loops, guitar tracks, and music assets</p>
-  <p>© 2025 Carlton Heywood</p>
-</footer>
-
+  <footer class="site-footer">
+    <p>🎸 Carlton Heywood Music</p>
+    <p>Original chiptune loops, guitar tracks, and music assets</p>
+    <p>© 2025 Carlton Heywood</p>
+  </footer>
 
 </body>
 </html>

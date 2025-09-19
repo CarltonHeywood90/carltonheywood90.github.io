@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>BandCamp</title>
+  <title>BandCamp - Carlton Heywood</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Modular nav placeholder -->
+  <!-- Modular nav -->
   <div id="nav-placeholder"></div>
   <script>
     fetch('nav.html')
@@ -17,32 +17,36 @@
         document.getElementById('nav-placeholder').innerHTML = data;
       });
   </script>
-</head>
 
-<body>
   <div class="banner">
     <img src="banner.jpg" alt="Carlton Heywood Banner" />
   </div>
 
-  <h1>Bandcamp</h1>
+  <div class="container">
+    <h1 class="page-title">Bandcamp</h1>
 
-  <p style="text-align: center; font-size: 2rem;">
-    Welcome to my Bandcamp page! Here you can listen to and purchase my original music.
-  </p>
+    <section class="intro">
+      <p class="center-text large-text">
+        Welcome to my Bandcamp page! Here you can listen to and purchase my original music.
+      </p>
 
-  <h2>Featured Track: <em>Sowing Thorns</em></h2>
-  <p style="text-align: center; font-size: 2rem;">Check out this track and explore more on my Bandcamp.</p>
+      <h2>Featured Track: <em>Sowing Thorns</em></h2>
+      <p class="center-text large-text">
+        Check out this track and explore more on my Bandcamp.
+      </p>
 
-    <div class="centered">
-    <h2>🎵 Buy “Sowing Thorns” on Bandcamp</h2>
-    <iframe style="border: 0; width: 400px; height: 175px; display: block; margin: 0 auto;"
-      src="https://bandcamp.com/EmbeddedPlayer/track=535442203/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
-      seamless>
-      <a href="https://carltonheywood.bandcamp.com/track/sowing-thorns">Sowing Thorns by Carlton Heywood</a>
-    </iframe>
+      <div class="centered buy-pack">
+        <h2>🎵 Buy “Sowing Thorns” on Bandcamp</h2>
+        <iframe class="bandcamp-embed"
+          src="https://bandcamp.com/EmbeddedPlayer/track=535442203/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+          seamless>
+          <a href="https://carltonheywood.bandcamp.com/track/sowing-thorns">Sowing Thorns by Carlton Heywood</a>
+        </iframe>
+      </div>
+    </section>
   </div>
 
-  <footer style="background:#000000; color:#4169E1; text-align:center; padding:1rem 0; margin-top:3rem; font-family:Arial, sans-serif; font-weight:600;">
+  <footer class="site-footer">
     <p>🎸 Carlton Heywood Music</p>
     <p>Original chiptune loops, guitar tracks, and music assets</p>
     <p>© 2025 Carlton Heywood</p>

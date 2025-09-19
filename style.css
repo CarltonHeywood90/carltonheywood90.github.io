@@ -122,3 +122,16 @@ footer {
   margin-top: 3rem;
   font-weight: 600;
 }
+
+.centered iframe {
+  margin: auto;
+  display: block;
+  max-width: 640px;  /* keeps embeds from being full width */
+  width: 100%;        /* responsive to container */
+  height: 300px;      /* default height */
+}
+
+/* Optional: slightly taller for YouTube */
+.centered.youtube iframe {
+  height: 360px;
+}

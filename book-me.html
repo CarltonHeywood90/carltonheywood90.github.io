@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Book Me</title>
+  <title>Book Me - Carlton Heywood</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Modular nav placeholder -->
+  <!-- Modular nav -->
   <div id="nav-placeholder"></div>
   <script>
     fetch('nav.html')
@@ -17,32 +17,42 @@
         document.getElementById('nav-placeholder').innerHTML = data;
       });
   </script>
-</head>
 
-<body>
   <div class="banner">
     <img src="banner.jpg" alt="Carlton Heywood Banner" />
   </div>
 
-  <h1>Book Me</h1>
+  <div class="container">
+    <h1 class="page-title">Book Me</h1>
 
-  <p style="text-align: center; font-size: 2rem;">Thanks for your interest in connecting! I’m Carlton Heywood, a musician passionate about original guitar-driven music and creative collaborations.</p>
+    <section class="intro">
+      <p class="center-text large-text">
+        Thanks for your interest in connecting! I’m Carlton Heywood, a musician passionate about original guitar-driven music and creative collaborations.
+      </p>
 
-  <p style="text-align: center; font-size: 2rem;">I’m currently involved in a project called Brutal Honesty, Relentless Drive (BHRD). We’re actively looking for opportunities to open for bands, play open mic nights, and collaborate with fellow musicians and creators.</p>
+      <p class="center-text large-text">
+        I’m currently involved in a project called Brutal Honesty, Relentless Drive (BHRD). We’re actively looking for opportunities to open for bands, play open mic nights, and collaborate with fellow musicians and creators.
+      </p>
 
-  <p style="text-align: center; font-size: 2rem;">If you’re interested in booking me for performances, collaborations, or any creative projects, please reach out via email:</p>
-  <div style="text-align: center;">
-  <a href="mailto:cjwood1@gmail.com" style="font-size: 2rem;" class="email-link">cjwood1@gmail.com</a>
+      <p class="center-text large-text">
+        If you’re interested in booking me for performances, collaborations, or any creative projects, please reach out via email:
+      </p>
+
+      <p class="center-text large-text">
+        <a href="mailto:cjwood1@gmail.com" class="email-link">cjwood1@gmail.com</a>
+      </p>
+
+      <p class="center-text large-text">
+        Feel free to include details about your event or project — I’m excited to hear from you!
+      </p>
+    </section>
   </div>
 
-  <p style="text-align: center; font-size: 2rem;">Feel free to include details about your event or project — I’m excited to hear from you!</p>
-
-<footer style="background:#000000; color:#4169E1; text-align:center; padding:1rem 0; margin-top:3rem; font-family:Arial, sans-serif; font-weight:600;">
-  <p>🎸 Carlton Heywood Music</p>
-  <p>Original chiptune loops, guitar tracks, and music assets</p>
-  <p>© 2025 Carlton Heywood</p>
-</footer>
-
+  <footer class="site-footer">
+    <p>🎸 Carlton Heywood Music</p>
+    <p>Original chiptune loops, guitar tracks, and music assets</p>
+    <p>© 2025 Carlton Heywood</p>
+  </footer>
 
 </body>
 </html>
