@@ -174,13 +174,14 @@ a.service-link:hover {
 }
 
 .itchio-embed {
-  display: block;     /* ensures margin auto works */
-  margin: 0 auto;     /* horizontally center */
-  width: 100%;        /* responsive width */
-  max-width: 400px;   /* caps width */
-  height: 150px;      /* adjust as needed */
-  border: none;       /* optional clean look */
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 400px; /* adjust as needed */
+  height: 150px;    /* adjust as needed */
+  border: none;
 }
+
 
 /* =========================
    Scroll-to-top button
