@@ -175,13 +175,10 @@ a.service-link:hover {
 
 .itchio-embed {
   display: block;
-  margin: 0 auto;
-  width: 100%;
-  max-width: 400px; /* adjust as needed */
-  height: 150px;    /* adjust as needed */
+  margin: 1rem auto;   /* centers it */
   border: none;
+  max-width: 100%;     /* don’t overflow container */
 }
-
 
 /* =========================
    Scroll-to-top button

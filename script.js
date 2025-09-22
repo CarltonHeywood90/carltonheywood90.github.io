@@ -1,20 +1,25 @@
 // -------------------------------
-// script.js (refactored)
+// script.js (refactored & modular)
 // -------------------------------
-
 document.addEventListener('DOMContentLoaded', () => {
 
-  // -------------------------------
-  // 1️⃣ Load nav dynamically and make fixed
-  // -------------------------------
   const navPlaceholder = document.getElementById('nav-placeholder');
-  const container = document.querySelector('.container');
   const banner = document.querySelector('.banner');
 
+  // Utility: run fn after images in element load
+  const onImageLoad = (el, fn) => {
+    if (!el) return;
+    if (el.complete) fn();
+    else el.addEventListener('load', fn, { once: true });
+  };
+
+  // -------------------------------
+  // 1️⃣ Load nav dynamically and style it fixed
+  // -------------------------------
   fetch('nav.html')
-    .then(response => response.text())
-    .then(data => {
-      navPlaceholder.innerHTML = data;
+    .then(res => res.text())
+    .then(html => {
+      navPlaceholder.innerHTML = html;
 
       Object.assign(navPlaceholder.style, {
         position: 'fixed',
@@ -25,64 +30,55 @@ document.addEventListener('DOMContentLoaded', () => {
         backgroundColor: '#000',
         borderBottom: '1px solid #222',
         boxShadow: '0 2px 6px rgba(0,0,0,0.5)',
-        padding: '1rem 1rem',
+        padding: '1rem',
         transition: 'all 0.2s ease'
       });
 
-      // Adjust banner margin to prevent it from being hidden behind nav
-      const adjustBannerMargin = () => {
-        if (banner) {
-          const navHeight = navPlaceholder.offsetHeight;
-          banner.style.marginTop = navHeight + 'px';
-        }
+      // Adjust banner offset under nav
+      const adjustBannerOffset = () => {
+        if (!banner) return;
+        banner.style.marginTop = navPlaceholder.offsetHeight + 'px';
       };
 
-      // Run once after image load (mobile fix)
-      if (banner) {
-        const bannerImg = banner.querySelector('img');
-        if (bannerImg && !bannerImg.complete) {
-          bannerImg.addEventListener('load', adjustBannerMargin);
+      // Initial + responsive adjustment
+      adjustBannerOffset();
+      window.addEventListener('resize', adjustBannerOffset);
+
+      // Run again after banner image fully loads
+      const bannerImg = banner?.querySelector('img');
+      if (bannerImg) onImageLoad(bannerImg, adjustBannerOffset);
+
+      // 2️⃣ Shrink nav on scroll
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+          navPlaceholder.style.backgroundColor = '#111';
+          navPlaceholder.style.padding = '0.5rem 1rem';
+        } else {
+          navPlaceholder.style.backgroundColor = '#000';
+          navPlaceholder.style.padding = '1rem';
         }
-      }
-
-      // Initial adjustment & on window resize
-      adjustBannerMargin();
-      window.addEventListener('resize', adjustBannerMargin);
+      });
     });
 
   // -------------------------------
-  // 2️⃣ Shrink nav on scroll
+  // 3️⃣ Smooth scrolling for anchors
   // -------------------------------
-  const shrinkNavOnScroll = () => {
-    if (!navPlaceholder) return;
-    if (window.scrollY > 50) {
-      navPlaceholder.style.backgroundColor = '#111';
-      navPlaceholder.style.padding = '0.5rem 1rem';
-    } else {
-      navPlaceholder.style.backgroundColor = '#000';
-      navPlaceholder.style.padding = '1rem 1rem';
-    }
-  };
-  window.addEventListener('scroll', shrinkNavOnScroll);
-
-  // -------------------------------
-  // 3️⃣ Smooth scrolling for anchor links
-  // -------------------------------
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      const target = document.querySelector(this.getAttribute('href'));
-      if (!target) return;
-      e.preventDefault();
-      target.scrollIntoView({ behavior: 'smooth' });
-    });
+  document.body.addEventListener('click', e => {
+    const link = e.target.closest('a[href^="#"]');
+    if (!link) return;
+    const target = document.querySelector(link.getAttribute('href'));
+    if (!target) return;
+    e.preventDefault();
+    target.scrollIntoView({ behavior: 'smooth' });
   });
 
   // -------------------------------
   // 4️⃣ Scroll-to-top button
   // -------------------------------
-  const topBtn = document.createElement('button');
-  topBtn.id = 'scrollTopBtn';
-  topBtn.innerText = '↑ Top';
+  const topBtn = Object.assign(document.createElement('button'), {
+    id: 'scrollTopBtn',
+    innerText: '↑ Top'
+  });
   Object.assign(topBtn.style, {
     position: 'fixed',
     bottom: '20px',
@@ -98,44 +94,47 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   document.body.appendChild(topBtn);
 
-  const toggleScrollTopBtn = () => {
-    const scrollThreshold = Math.min(200, document.body.scrollHeight / 10);
-    topBtn.style.display = window.scrollY > scrollThreshold ? 'block' : 'none';
-  };
-
-  window.addEventListener('scroll', toggleScrollTopBtn);
-  topBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  window.addEventListener('scroll', () => {
+    const threshold = Math.min(200, document.body.scrollHeight / 10);
+    topBtn.style.display = window.scrollY > threshold ? 'block' : 'none';
+  });
+  topBtn.addEventListener('click', () =>
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  );
 
   // -------------------------------
-  // 5️⃣ Lazy load images and iframes
+  // 5️⃣ Lazy load images & iframes
   // -------------------------------
   const lazyEls = document.querySelectorAll('img[data-src], iframe[data-src]');
-  const lazyObserver = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-      const el = entry.target;
-      el.src = el.dataset.src;
-      lazyObserver.unobserve(el);
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          el.src = el.dataset.src;
+          io.unobserve(el);
+        }
+      });
     });
-  });
-  lazyEls.forEach(el => lazyObserver.observe(el));
+    lazyEls.forEach(el => io.observe(el));
+  } else {
+    // Fallback: load everything immediately
+    lazyEls.forEach(el => (el.src = el.dataset.src));
+  }
 
   // -------------------------------
   // 6️⃣ Highlight active nav link
   // -------------------------------
   const sections = document.querySelectorAll('main h2[id]');
-  const navLinks = document.querySelectorAll('#nav-placeholder a[href^="#"]');
-
   const highlightActiveLink = () => {
     let current = '';
     sections.forEach(section => {
       if (window.scrollY >= section.offsetTop - 60) current = section.id;
     });
-    navLinks.forEach(link => {
+    navPlaceholder.querySelectorAll('a[href^="#"]').forEach(link => {
       link.classList.toggle('active', link.getAttribute('href') === '#' + current);
     });
   };
-
   window.addEventListener('scroll', highlightActiveLink);
 
 });
