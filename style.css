@@ -65,6 +65,7 @@ nav a.active {
 .banner {
   width: 100%;
   display: block;
+  margin-top: 80px; /* space for fixed nav */
   margin-bottom: 1rem; /* small gap between banner and article */
 }
 
