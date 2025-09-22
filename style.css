@@ -54,6 +54,12 @@ body {
   text-decoration: underline;
 }
 
+#nav-placeholder a.active {
+  color: #fff;
+  text-decoration: underline;
+}
+
+
 /* =========================
    Main content spacing
 ========================= */
