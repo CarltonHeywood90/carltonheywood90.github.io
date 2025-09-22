@@ -2,95 +2,62 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sitemap</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carlton Heywood - Sitemap</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
+  <!-- Modular nav -->
   <div id="nav-placeholder"></div>
   <script>
-  fetch('nav.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('nav-placeholder').innerHTML = data;
-    });
+    fetch('nav.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('nav-placeholder').innerHTML = data;
+      });
   </script>
-</head>
-<body>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Carlton Heywood - Guitarist</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 1rem;
-      background-color: #111;
-      color: #eee;
-    }
-
-    .banner img {
-      width: 100%;
-      max-width: 100%;
-      height: auto;
-      display: block;
-      margin-bottom: 2rem;
-      border-radius: 8px;
-    }
-
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
-    }
-
-    p {
-      font-size: 1.2rem;
-      line-height: 1.6;
-    }
-  </style>
-</head>
-
-<body>
+  <!-- Banner -->
   <div class="banner">
     <img data-src="banner.jpg" alt="Carlton Heywood Banner" />
   </div>
 
-  <h1>Sitemap</h1>
+  <div class="container">
+    <h1 class="page-title">Sitemap</h1>
 
-  <h2>Main Pages</h2>
-  <ul class="pages">
-    <li><a href="/" class="page-link">Home</a></li>
-    <li><a href="8bit-sound.html" class="page-link">8-Bit Sound</a></li>
-    <li><a href="original-music.html" class="page-link">Original Music</a></li>
-    <li><a href="youtube-channel.html" class="page-link">YouTube Channel</a></li>
-    <li><a href="about-me.html" class="page-link">About Me</a></li>
-    <li><a href="blog.html" class="page-link">Blog</a></li>
-    <li><a href="book-me.html" class="page-link">Book Me</a></li>
-    <li><a href="bandcamp.html" class="page-link">Bandcamp</a></li>
-    <li><a href="mixing-mastering.html" class="page-link">Mixing &amp; Mastering</a></li>
-    <li><a href="sitemap.html" class="page-link">Sitemap</a></li>
-  </ul>
+    <h2>Main Pages</h2>
+    <ul class="pages">
+      <li><a href="/" class="page-link">Home</a></li>
+      <li><a href="8bit-sound.html" class="page-link">8-Bit Sound</a></li>
+      <li><a href="original-music.html" class="page-link">Original Music</a></li>
+      <li><a href="youtube-channel.html" class="page-link">YouTube Channel</a></li>
+      <li><a href="about-me.html" class="page-link">About Me</a></li>
+      <li><a href="blog.html" class="page-link">Blog</a></li>
+      <li><a href="book-me.html" class="page-link">Book Me</a></li>
+      <li><a href="bandcamp.html" class="page-link">Bandcamp</a></li>
+      <li><a href="mixing-mastering.html" class="page-link">Mixing &amp; Mastering</a></li>
+      <li><a href="sitemap.html" class="page-link">Sitemap</a></li>
+    </ul>
 
-  <h2>Blog Posts</h2>
-  <ul class="pages">
-    <li><a href="blog-welcome-to-chaos.html" class="page-link">Welcome to Chaos</a></li>
-    <li><a href="prog-metal-bands-article.html" class="page-link">Prog Metal Bands: My Journey</a></li>
-    <li><a href="how-metal-progressive-bands-shaped-my-guitar-style.html" class="page-link">How Metal Progressive Bands Shaped My Guitar Style</a></li>
-    <li><a href="exploring_progressive_rock_metal_bands_through_my_music.html">Exploring Progressive Rock Metal Bands Trhough My Music</a></li>
-    <li><a href="discover-new-music.html" class="page-link">Discovering New Music and Finding Inspiration</a></li>
-  </ul>
+    <h2>Blog Posts</h2>
+    <ul class="pages">
+      <li><a href="blog-welcome-to-chaos.html" class="page-link">Welcome to Chaos</a></li>
+      <li><a href="prog-metal-bands-article.html" class="page-link">Prog Metal Bands: My Journey</a></li>
+      <li><a href="how-metal-progressive-bands-shaped-my-guitar-style.html" class="page-link">How Metal Progressive Bands Shaped My Guitar Style</a></li>
+      <li><a href="exploring_progressive_rock_metal_bands_through_my_music.html" class="page-link">Exploring Progressive Rock Metal Bands Through My Music</a></li>
+      <li><a href="discover-new-music.html" class="page-link">Discovering New Music and Finding Inspiration</a></li>
+    </ul>
+  </div>
 
-  <footer style="background:#000000; color:#4169E1; text-align:center; padding:1rem 0; margin-top:3rem; font-family:Arial, sans-serif; font-weight:600;">
+  <footer class="site-footer">
     <p>🎸 Carlton Heywood Music</p>
     <p>Original chiptune loops, guitar tracks, and music assets</p>
     <p>© 2025 Carlton Heywood</p>
   </footer>
 
-<script src="script.js"></script>
+  <script src="script.js"></script>
 
 </body>
 </html>
