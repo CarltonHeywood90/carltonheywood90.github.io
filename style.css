@@ -178,6 +178,11 @@ a.service-link:hover {
   height: 64px;
 }
 
+.itch-embed {
+  border: none;
+  max-width: 100%;
+}
+
 /* =========================
    Scroll-to-top button
 ========================= */
