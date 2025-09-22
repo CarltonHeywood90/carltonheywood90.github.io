@@ -1,5 +1,5 @@
 // -------------------------------
-// script.js (refactored & modular)
+// script.js (refactored, lazy-loading removed)
 // -------------------------------
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -102,40 +102,8 @@ document.addEventListener('DOMContentLoaded', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   );
 
-// -------------------------------
-// 5️⃣ Lazy load images & iframes
-// -------------------------------
-document.addEventListener("DOMContentLoaded", () => {
-  const lazyEls = document.querySelectorAll('img[data-src], iframe[data-src]');
-  
-  // Lazy load with IntersectionObserver
-  if ('IntersectionObserver' in window) {
-    const io = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const el = entry.target;
-          el.src = el.dataset.src;
-          io.unobserve(el);
-        }
-      });
-    });
-    lazyEls.forEach(el => io.observe(el));
-  } else {
-    // Fallback: load everything immediately
-    lazyEls.forEach(el => el.src = el.dataset.src);
-  }
-
-  // Immediately load iframes that should not be lazy-loaded
-  const immediateIframes = document.querySelectorAll('iframe.no-lazy');
-  immediateIframes.forEach(iframe => {
-    if (!iframe.src) {
-      iframe.src = iframe.datasetSrc || iframe.getAttribute('src');
-    }
-  });
-});
-
   // -------------------------------
-  // 6️⃣ Highlight active nav link
+  // 5️⃣ Highlight active nav link
   // -------------------------------
   const sections = document.querySelectorAll('main h2[id]');
   const highlightActiveLink = () => {
