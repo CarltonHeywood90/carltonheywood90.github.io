@@ -67,7 +67,6 @@ body {
   max-width: 800px;
   margin: 0 auto;
   padding: 2rem 1rem;
-  padding-top: 100px;  /* extra space so content isn't hidden under fixed nav */
 }
 
 
@@ -78,7 +77,7 @@ body {
   width: 100%;
   height: auto;
   display: block;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   border-radius: 8px;
 }
 

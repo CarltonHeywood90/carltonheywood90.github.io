@@ -25,7 +25,6 @@ fetch('nav.html')
 
     const setTopSpacing = () => {
         const navHeight = navPlaceholder.offsetHeight;
-        container.style.paddingTop = navHeight + 'px';
         if (banner) banner.style.marginTop = navHeight + 'px';
     };
 
