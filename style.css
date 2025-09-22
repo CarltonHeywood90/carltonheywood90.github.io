@@ -22,9 +22,10 @@ body {
 ========================= */
 nav {
   width: 100%;
+  background: linear-gradient(90deg, #000000 0%, #333333 67%, #bbbbbb 100%);
   border-bottom: 1px solid #222;
   position: fixed;
-  height: 150px;
+  height: 25px;
   top: 0;
   left: 0;
   z-index: 1000;
@@ -199,6 +200,7 @@ a.service-link:hover {
 ========================= */
 footer {
   color: #4169E1;
+  background: linear-gradient(90deg, #000000 0%, #333333 67%, #bbbbbb 100%);
   text-align: center;
   padding: 1rem 0;
   margin-top: 3rem;
