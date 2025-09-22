@@ -3,7 +3,7 @@
 ========================= */
 body {
   font-family: Arial, sans-serif;
-  background: linear-gradient(90deg, #000000 0%, #333333 75%, #bbbbbb 100%);
+  background: linear-gradient(90deg, #000000 0%, #333333 67%, #bbbbbb 100%);
   color: #fff;
   margin: 0;
   padding: 0;
@@ -174,12 +174,13 @@ a.service-link:hover {
 }
 
 .itchio-embed {
-  width: 100%;       /* makes it responsive */
-  max-width: 400px;  /* limits it so it’s not too wide */
-  height: 150px;     /* reduces vertical space */
-  border: none;      /* optional clean look */
+  display: block;     /* ensures margin auto works */
+  margin: 0 auto;     /* horizontally center */
+  width: 100%;        /* responsive width */
+  max-width: 400px;   /* caps width */
+  height: 150px;      /* adjust as needed */
+  border: none;       /* optional clean look */
 }
-
 
 /* =========================
    Scroll-to-top button
