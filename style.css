@@ -3,20 +3,19 @@
 ========================= */
 body {
   font-family: Arial, sans-serif;
-  background: linear-gradient(180deg, #000000 0%, #111111 50%, #000000 100%);
+  background: linear-gradient(90deg, #000000 0%, #333333 50%, #bbbbbb 100%);
   color: #fff;
   margin: 0;
   padding: 0;
   line-height: 1.6;
 }
 
-
-/* Wrapper for main content */
 .container {
   max-width: 800px;
   margin: 0 auto;
-  padding: 2rem 1rem 2rem 1rem; /* keep bottom padding, remove top padding */
+  padding: 2rem 1rem 2rem 1rem; /* bottom + side padding only */
 }
+
 
 /* =========================
    Navigation
