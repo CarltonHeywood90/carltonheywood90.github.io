@@ -19,13 +19,18 @@ fetch('nav.html')
     navPlaceholder.style.borderBottom = '1px solid #222';
     navPlaceholder.style.boxShadow = '0 2px 6px rgba(0,0,0,0.5)';
 
-    // Set container padding dynamically
+    // Dynamically set top spacing for banner and container
     const container = document.querySelector('.container');
-    const setContainerPadding = () => {
-      container.style.paddingTop = navPlaceholder.offsetHeight + 'px';
+    const banner = document.querySelector('.banner');
+
+    const setTopSpacing = () => {
+      const navHeight = navPlaceholder.offsetHeight;
+      container.style.paddingTop = navHeight + 'px';
+      if (banner) banner.style.marginTop = navHeight + 'px';
     };
-    setContainerPadding();
-    window.addEventListener('resize', setContainerPadding); // adjust on resize
+
+    setTopSpacing();
+    window.addEventListener('resize', setTopSpacing); // adjust on resize
   });
 
 // 2️⃣ Shrink nav on scroll
@@ -47,9 +52,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function(e) {
     e.preventDefault();
     const target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-      target.scrollIntoView({ behavior: 'smooth' });
-    }
+    if (target) target.scrollIntoView({ behavior: 'smooth' });
   });
 });
 
@@ -73,7 +76,8 @@ Object.assign(topBtn.style, {
 document.body.appendChild(topBtn);
 
 window.addEventListener('scroll', () => {
-  if (window.scrollY > 200) topBtn.style.display = 'block';
+  const scrollThreshold = Math.min(200, document.body.scrollHeight / 10); 
+  if (window.scrollY > scrollThreshold) topBtn.style.display = 'block';
   else topBtn.style.display = 'none';
 });
 
