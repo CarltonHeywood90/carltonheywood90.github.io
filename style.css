@@ -173,13 +173,6 @@ a.service-link:hover {
   height: 64px;
 }
 
-.itchio-embed {
-  display: block;
-  margin: 1rem auto;   /* centers it */
-  border: none;
-  max-width: 100%;     /* don’t overflow container */
-}
-
 /* =========================
    Scroll-to-top button
 ========================= */
