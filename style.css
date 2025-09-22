@@ -3,12 +3,13 @@
 ========================= */
 body {
   font-family: Arial, sans-serif;
-  background: #000;
+  background: linear-gradient(180deg, #000000 0%, #111111 50%, #000000 100%);
   color: #fff;
   margin: 0;
   padding: 0;
   line-height: 1.6;
 }
+
 
 /* Wrapper for main content */
 .container {
