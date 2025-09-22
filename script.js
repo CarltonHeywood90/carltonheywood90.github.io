@@ -2,14 +2,14 @@
 // script.js
 // -------------------------------
 
-// 1️⃣ Load nav dynamically and set fixed nav
+// 1️⃣ Load nav dynamically and make fixed
 fetch('nav.html')
   .then(response => response.text())
   .then(data => {
     const navPlaceholder = document.getElementById('nav-placeholder');
     navPlaceholder.innerHTML = data;
 
-    // Make nav fixed
+    // Ensure nav is fixed
     navPlaceholder.style.position = 'fixed';
     navPlaceholder.style.top = '0';
     navPlaceholder.style.left = '0';
@@ -18,22 +18,24 @@ fetch('nav.html')
     navPlaceholder.style.backgroundColor = '#000';
     navPlaceholder.style.borderBottom = '1px solid #222';
     navPlaceholder.style.boxShadow = '0 2px 6px rgba(0,0,0,0.5)';
+    navPlaceholder.style.padding = '1rem 1rem';
+    navPlaceholder.style.transition = 'all 0.2s ease';
 
-    // Dynamically set top spacing for banner and container
     const container = document.querySelector('.container');
     const banner = document.querySelector('.banner');
 
     const setTopSpacing = () => {
-        const navHeight = navPlaceholder.offsetHeight;
-        if (banner) banner.style.marginTop = navHeight + 'px';
+      const navHeight = navPlaceholder.offsetHeight;
+      // Only push the banner down, not the container
+      if (banner) banner.style.marginTop = navHeight + 'px';
     };
 
     // Wait for banner image to load before setting margin
     if (banner) {
-        const bannerImg = banner.querySelector('img');
-        if (bannerImg && !bannerImg.complete) {
-            bannerImg.addEventListener('load', setTopSpacing);
-    }
+      const bannerImg = banner.querySelector('img');
+      if (bannerImg && !bannerImg.complete) {
+        bannerImg.addEventListener('load', setTopSpacing);
+      }
     }
 
     setTopSpacing();
@@ -83,7 +85,7 @@ Object.assign(topBtn.style, {
 document.body.appendChild(topBtn);
 
 window.addEventListener('scroll', () => {
-  const scrollThreshold = Math.min(200, document.body.scrollHeight / 10); 
+  const scrollThreshold = Math.min(200, document.body.scrollHeight / 10);
   if (window.scrollY > scrollThreshold) topBtn.style.display = 'block';
   else topBtn.style.display = 'none';
 });
