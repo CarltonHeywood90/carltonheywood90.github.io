@@ -21,22 +21,18 @@ body {
    Navigation
 ========================= */
 #nav-placeholder {
-  position: fixed;
+  position: fixed;        /* fixed instead of sticky */
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
-  background: #000;
+  background: #000;       /* matches your current nav bg */
   border-bottom: 1px solid #222;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.5); /* subtle separation from content */
 }
 
-.container {
-  padding-top: 80px; /* adjust to match nav height */
-}
-
-
-nav ul {
+/* Make sure ul and links keep same styling */
+#nav-placeholder nav ul {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
@@ -46,17 +42,28 @@ nav ul {
   justify-content: center;
 }
 
-nav a {
+#nav-placeholder nav a {
   color: #4169E1;
   text-decoration: none;
   font-weight: 600;
   transition: color 0.2s ease;
 }
 
-nav a:hover {
+#nav-placeholder nav a:hover {
   color: #fff;
   text-decoration: underline;
 }
+
+/* =========================
+   Main content spacing
+========================= */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  padding-top: 100px;  /* extra space so content isn't hidden under fixed nav */
+}
+
 
 /* =========================
    Banner
