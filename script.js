@@ -24,13 +24,21 @@ fetch('nav.html')
     const banner = document.querySelector('.banner');
 
     const setTopSpacing = () => {
-      const navHeight = navPlaceholder.offsetHeight;
-      container.style.paddingTop = navHeight + 'px';
-      if (banner) banner.style.marginTop = navHeight + 'px';
+        const navHeight = navPlaceholder.offsetHeight;
+        container.style.paddingTop = navHeight + 'px';
+        if (banner) banner.style.marginTop = navHeight + 'px';
     };
 
+    // Wait for banner image to load before setting margin
+    if (banner) {
+        const bannerImg = banner.querySelector('img');
+        if (bannerImg && !bannerImg.complete) {
+            bannerImg.addEventListener('load', setTopSpacing);
+    }
+    }
+
     setTopSpacing();
-    window.addEventListener('resize', setTopSpacing); // adjust on resize
+    window.addEventListener('resize', setTopSpacing);
   });
 
 // 2️⃣ Shrink nav on scroll
