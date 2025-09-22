@@ -173,6 +173,14 @@ a.service-link:hover {
   height: 64px;
 }
 
+.itchio-embed {
+  width: 100%;       /* makes it responsive */
+  max-width: 400px;  /* limits it so it’s not too wide */
+  height: 150px;     /* reduces vertical space */
+  border: none;      /* optional clean look */
+}
+
+
 /* =========================
    Scroll-to-top button
 ========================= */
