@@ -69,5 +69,20 @@
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
+  <url>
+    <loc>https://carltonheywood90.github.io/exploring_progressive_rock_metal_bands_through_my_music.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://carltonheywood90.github.io/discover-new-music.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>  
+  <url>
+    <loc>https://carltonheywood90.github.io/find-new-music.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 
 </urlset>
