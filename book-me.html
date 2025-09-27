@@ -27,26 +27,53 @@
     <h1 class="page-title">Book Me</h1>
 
     <section class="intro">
-      <p class="center-text large-text">
+      <p class="centered">
         Thanks for your interest in connecting! I’m Carlton Heywood, a musician passionate about original guitar-driven music and creative collaborations.
       </p>
 
-      <p class="center-text large-text">
+      <p class="centered">
         I’m currently involved in a project called Brutal Honesty, Relentless Drive (BHRD). We’re actively looking for opportunities to open for bands, play open mic nights, and collaborate with fellow musicians and creators.
       </p>
 
-      <p class="center-text large-text">
-        If you’re interested in booking me for performances, collaborations, or any creative projects, please reach out via email:
-      </p>
-
-      <p class="center-text large-text">
-        <a href="mailto:cjwood1@gmail.com" class="email-link">cjwood1@gmail.com</a>
-      </p>
-
-      <p class="center-text large-text">
-        Feel free to include details about your event or project — I’m excited to hear from you!
+      <p class="centered">
+        Fill out the form below to reach me for bookings, collaborations, or any creative projects. I’ll get back to you as soon as possible!
       </p>
     </section>
+
+    <!-- Contact / Booking Form -->
+    <form action="https://formspree.io/f/xeorezpv" method="POST" class="contact-form">
+      <label for="name">Name*</label>
+      <input type="text" id="name" name="name" required placeholder="Your full name">
+
+      <label for="email">Email*</label>
+      <input type="email" id="email" name="email" required placeholder="you@example.com">
+
+      <label for="phone">Phone</label>
+      <input type="tel" id="phone" name="phone" placeholder="Optional">
+
+      <label for="inquiry">Type of Inquiry*</label>
+      <select id="inquiry" name="inquiry" required>
+        <option value="">Select</option>
+        <option value="general">General Question</option>
+        <option value="booking">Booking</option>
+        <option value="collaboration">Collaboration</option>
+        <option value="other">Other</option>
+      </select>
+
+      <label for="date">Preferred Date & Time</label>
+      <input type="datetime-local" id="date" name="date">
+
+      <label for="message">Message*</label>
+      <textarea id="message" name="message" required placeholder="Your message here"></textarea>
+
+      <label class="checkbox">
+        <input type="checkbox" name="consent" required>
+        I agree to be contacted
+      </label>
+
+      <button type="submit">Send</button>
+      <p class="form-response">Thanks! Your message has been sent.</p>
+    </form>
   </div>
 
   <footer class="site-footer">

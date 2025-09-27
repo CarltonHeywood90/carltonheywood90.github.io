@@ -211,3 +211,68 @@ footer {
   margin-top: 3rem;
   font-weight: 600;
 }
+
+/* =========================
+   Contact / Booking Form
+========================= */
+.contact-form {
+  max-width: 500px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: #111;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #222;
+}
+
+.contact-form label {
+  font-weight: 600;
+  color: #4169E1;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  padding: 8px;
+  font-size: 1rem;
+  border: 1px solid #222;
+  border-radius: 6px;
+  background: #000;
+  color: #fff;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #aaa;
+}
+
+.contact-form button {
+  padding: 10px;
+  font-size: 1rem;
+  background-color: #4169E1;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.contact-form button:hover {
+  background-color: #FF6347;
+}
+
+.contact-form label.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+}
+
+.contact-form .form-response {
+  color: #00FF00;
+  font-weight: bold;
+  text-align: center;
+  display: none;
+}

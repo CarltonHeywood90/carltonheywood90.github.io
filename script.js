@@ -118,3 +118,38 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', highlightActiveLink);
 
 });
+
+// Book Me form AJAX submission
+document.addEventListener("DOMContentLoaded", function() {
+  const form = document.querySelector(".contact-form");
+  const responseMsg = form.querySelector(".form-response");
+
+  form.addEventListener("submit", function(e) {
+    e.preventDefault(); // prevent default form submission
+
+    const formData = new FormData(form);
+
+    fetch(form.action, {
+      method: "POST",
+      body: formData,
+      headers: {
+        'Accept': 'application/json'
+      }
+    })
+    .then(response => {
+      if (response.ok) {
+        responseMsg.style.display = "block";
+        form.reset();
+      } else {
+        responseMsg.style.display = "block";
+        responseMsg.style.color = "#FF6347";
+        responseMsg.textContent = "Oops! There was a problem submitting your form.";
+      }
+    })
+    .catch(() => {
+      responseMsg.style.display = "block";
+      responseMsg.style.color = "#FF6347";
+      responseMsg.textContent = "Oops! There was a problem submitting your form.";
+    });
+  });
+});
