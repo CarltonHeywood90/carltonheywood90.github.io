@@ -217,33 +217,36 @@ footer {
 ========================= */
 .contact-form {
   max-width: 500px;
-  margin: 2rem auto; /* centers the form */
+  width: 100%;          /* ensures full width within container */
+  margin: 2rem auto;    /* centers horizontally */
   display: flex;
   flex-direction: column;
-  gap: 16px; /* space between inputs */
+  gap: 16px;
   background: #111;
   padding: 2rem;
   border-radius: 8px;
   border: 1px solid #222;
-  text-align: left; /* labels above inputs */
-}
-
-.contact-form label {
-  font-weight: 600;
-  color: #4169E1;
-  margin-bottom: 4px;
+  text-align: left;
 }
 
 .contact-form input,
 .contact-form select,
 .contact-form textarea {
+  display: block;
+  width: 100%;          /* ensures each input stretches full form width */
   padding: 10px;
   font-size: 1rem;
   border: 1px solid #222;
   border-radius: 6px;
   background: #000;
   color: #fff;
-  width: 100%;
+}
+
+.contact-form label {
+  display: block;       /* ensures labels are above inputs */
+  font-weight: 600;
+  color: #4169E1;
+  margin-bottom: 4px;
 }
 
 .contact-form input::placeholder,
