@@ -7,6 +7,23 @@
   <meta name="description" content="Explore Carlton Heywood's professional audio services, including mixing, mastering, and audio restoration to remove pops, clicks, and hum.">
   <link rel="stylesheet" href="style.css">
 </head>
+
+<body>
+
+  <!-- Modular nav -->
+  <div id="nav-placeholder"></div>
+  <script>
+    fetch('nav.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('nav-placeholder').innerHTML = data;
+      });
+  </script>
+
+  <div class="banner">
+    <img src="banner.jpg" alt="Carlton Heywood Banner" />
+  </div>
+
 <body>
   <header>
     <h1>Professional Audio Services</h1>
