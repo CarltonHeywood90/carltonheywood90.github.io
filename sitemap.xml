@@ -86,3 +86,10 @@
   </url>
 
 </urlset>
+
+<url>
+  <loc>https://yourdomain.com/audio-restoration.html</loc>
+  <lastmod>2025-09-29</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
