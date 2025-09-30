@@ -7,6 +7,23 @@
   <meta name="description" content="Professional audio restoration to remove pops, clicks, and hum from your recordings. High-quality service by Carlton Heywood. Get clean, polished audio today.">
   <link rel="stylesheet" href="style.css">
 </head>
+
+<body>
+
+  <!-- Modular nav -->
+  <div id="nav-placeholder"></div>
+  <script>
+    fetch('nav.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('nav-placeholder').innerHTML = data;
+      });
+  </script>
+
+  <div class="banner">
+    <img src="banner.jpg" alt="Carlton Heywood Banner" />
+  </div>
+
 <body>
   <header>
     <h1>Audio Restoration: Remove Pops, Clicks & Hum</h1>
