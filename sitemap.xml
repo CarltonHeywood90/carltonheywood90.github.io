@@ -28,11 +28,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://carltonheywood90.github.io/blog.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://carltonheywood90.github.io/book-me.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
