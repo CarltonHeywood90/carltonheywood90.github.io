@@ -49,19 +49,32 @@ nav ul {
 }
 
 nav a {
-  color: #4169E1;
+  background: #4169E1;          /* royal blue button */
+  color: #ffffff;               /* white text */
   text-decoration: none;
   font-weight: 600;
-  transition: color 0.2s ease;
+  padding: 0.6rem 1.2rem;       /* button padding */
+  border-radius: 8px;           /* rounded corners */
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 
 nav a:hover {
-  color: #fff;
-  text-decoration: underline;
+  background: #1E90FF;          /* lighter blue on hover */
+  color: #ffffff;
+  text-decoration: none;
+  transform: translateY(-2px);  /* slight lift effect */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+}
+
+nav a:active {
+  transform: translateY(0);     /* reset lift on click */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 
 nav a.active {
-  color: #FF6347; /* highlight active section */
+  background: #FF6347;          /* highlight active section */
+  color: #ffffff;
 }
 
 /* =========================
