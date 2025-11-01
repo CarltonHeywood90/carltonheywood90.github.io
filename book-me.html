@@ -87,13 +87,18 @@
 
   </div>
 
-  <footer class="site-footer">
-    <p>Brutal Honesty, Relentless Drive</p>
-    <p>Original chiptune loops, guitar tracks, and music assets</p>
-    <p>© 2025 BHRD</p>
-    <p>
-    </p>
-  </footer>
+<!-- in each page where you want the footer -->
+<div id="footer-placeholder"></div>
+
+<script>
+fetch('footer.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('footer-placeholder').innerHTML = data;
+  })
+  .catch(error => console.error('Error loading footer:', error));
+</script>
+
 
 <script src="script.js"></script>
 
